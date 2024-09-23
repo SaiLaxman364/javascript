@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mouse Over Example</title>
+</head>
+<body>
+    <div id="myDiv" style="width: 200px; height: 200px; background-color: lightblue;">
+        Laxman working in mathastech !
+    </div>
+
+    <script>
+        const div = document.getElementById('myDiv');
+
+        function handleMouseOver(event) {
+            const x = event.clientX;
+            const y = event.clientY;
+            console.log(`Mouse over at position: (${x}, ${y})`);
+        }
+
+        div.addEventListener('mouseover', handleMouseOver);
+    </script>
+</body>
+</html>

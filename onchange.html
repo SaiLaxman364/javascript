@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onchange Example</title>
+</head>
+<body>
+    <label for="fruitSelect">Choose a fruit:</label>
+    <select id="fruitSelect" name="fruitSelect" onchange="handleSelectChange()">
+        <option value="">--Select a fruit--</option>
+        <option value="apple">Apple</option>
+        <option value="banana">Banana</option>
+        <option value="cherry">Cherry</option>
+    </select>
+    <p id="message"></p>
+
+    <script>
+        function handleSelectChange() {
+            const selectedFruit = document.getElementById('fruitSelect').value;
+            
+            const message = document.getElementById('message');
+            
+            if (selectedFruit) {
+                message.textContent = `You selected: ${selectedFruit}`;
+            } else {
+                message.textContent = 'Please select a fruit.';
+            }
+        }
+    </script>
+</body>
+</html>

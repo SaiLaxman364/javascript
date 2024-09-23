@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onblur Textarea Example</title>
+</head>
+<body>
+    <label for="comments">Your comments:</label>
+    <textarea id="comments" name="comments" onblur="handleTextareaBlur()"></textarea>
+    <p id="message"></p>
+
+    <script>
+        function handleTextareaBlur() {
+            const textareaValue = document.getElementById('comments').value;
+            
+            const message = document.getElementById('message');
+            
+            if (textareaValue.trim() === '') {
+                message.textContent = 'Please provide your comments.';
+            } else {
+                message.textContent = 'Thank you for your comments!';
+            }
+        }
+    </script>
+</body>
+</html>

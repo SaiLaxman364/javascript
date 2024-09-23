@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onfocus Example</title>
+    <style>
+        .focused {
+            border: 2px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <label for="inputField">Enter text:</label>
+    <input type="text" id="inputField" name="inputField" onfocus="handleFocus()">
+    <p id="message"></p>
+
+    <script>
+        function handleFocus() {
+            const inputField = document.getElementById('inputField');
+        
+            inputField.classList.add('focused');
+            
+            const message = document.getElementById('message');
+            
+            message.textContent = 'Input field is now focused!';
+        }
+    </script>
+</body>
+</html>
